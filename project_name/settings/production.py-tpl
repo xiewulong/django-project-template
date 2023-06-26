@@ -4,6 +4,8 @@ from cryptography.fernet import Fernet
 
 from . import *
 
-f = Fernet(os.environ['PRODUCTION_KEY'].encode())
+f = Fernet(os.environ['PRO_KEY'].encode())
+
+DEBUG = Flase
 
 SECRET_KEY = f.decrypt(b'CIPHERTEXT')
